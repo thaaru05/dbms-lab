@@ -1,4 +1,4 @@
-1.
+
 CREATE TABLE student (
     rollno INT CHECK (rollno >= 1 AND rollno <= 99),
     sname VARCHAR(15),
