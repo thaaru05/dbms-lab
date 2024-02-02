@@ -22,3 +22,11 @@ INSERT INTO student VALUES (72, 'Vimal',9.32, 'CS', NULL, '17-JUN-04','Chennai')
 SELECT address from student where rollno!=5 AND address='Chennai';
 INSERT INTO student VALUES (58, 'Ram',9, 'CS', NULL, '06-JUL-04','Salem');
 SELECT *FROM student WHERE cgpa > 8 AND (sname = 'Ram' OR sname = 'Ravi');
+CREATE TABLE student_copy AS SELECT * FROM student WHERE 1 = 0;
+CREATE TABLE student_cgpa AS SELECT rollno,cgpa FROM student WHERE 1=0;
+DESC student_cgpa;
+CREATE TABLE part_time_student AS SELECT * FROM student WHERE 1 = 0;
+ALTER TABLE student ADD part_time varchar(4); 
+INSERT INTO student VALUES(1,'Arun',8,'IT',1021,'01-FEB-2005','Salem','yes');
+INSERT INTO student VALUES(5,'Chetan',8.5,'CS',1036,'08-NOV-2005','Hospet','no');
+INSERT INTO part_time_student SELECT * FROM student WHERE part_time='yes';
