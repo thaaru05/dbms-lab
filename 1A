@@ -1,0 +1,8 @@
+/*CREATE TABLE student (
+    rollno INT CHECK (rollno >= 1 AND rollno <= 99),
+    sname VARCHAR(15),
+    address VARCHAR(20),
+    cgpa DECIMAL(5,2) CHECK (cgpa >= 0.00 AND cgpa <= 10.00)
+);*/
+--DESC student;
+--ALTER TABLE student MODIFY rollno INT CHECK (rollno >= 1 AND rollno <= 999);
