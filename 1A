@@ -1,8 +1,12 @@
-/*CREATE TABLE student (
+1.
+CREATE TABLE student (
     rollno INT CHECK (rollno >= 1 AND rollno <= 99),
     sname VARCHAR(15),
     address VARCHAR(20),
     cgpa DECIMAL(5,2) CHECK (cgpa >= 0.00 AND cgpa <= 10.00)
-);*/
---DESC student;
---ALTER TABLE student MODIFY rollno INT CHECK (rollno >= 1 AND rollno <= 999);
+);
+DESC student;
+ALTER TABLE student MODIFY rollno INT CHECK (rollno >= 1 AND rollno <= 999);
+ALTER TABLE student ADD(Department varchar(50),Club_Membership_ID INT,Date_of_Birth DATE);
+ALTER TABLE student DROP COLUMN address;
+ALTER TABLE student RENAME COLUMN Date_of_Birth to DOB;
