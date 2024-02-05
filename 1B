@@ -1,0 +1,20 @@
+--1.
+/*CREATE TABLE Student (
+    Rollno INT PRIMARY KEY,
+    Sname VARCHAR(50),
+    Passport_number INT UNIQUE,
+    Department_code VARCHAR(50),
+    Age INT CHECK (Age > 17 AND Age < 21),
+    Qualification VARCHAR(50)
+);*/
+--desc student;
+--2.
+--ALTER TABLE Student MODIFY Qualification VARCHAR(50) DEFAULT 'HSC';
+--3.
+--INSERT INTO Student values (70,'Thaaru',0507,'IT02',20,'Student');
+--INSERT INTO Student values (68,'Teja',0705,'IT01',18,'Student');
+--INSERT INTO Student VALUES (72, 'Vimal', 0517, 'IT03', 20, DEFAULT);
+--4. 
+--INSERT INTO Student VALUES (38, 'Navee', 2507, 'IT02', 21, DEFAULT);
+--INSERT INTO Student VALUES (NULL, 'Siddhu', 0308, 'IT01',19,'Student');
+--INSERT INTO Student VALUES (11, 'Charan',0517, 'IT01', 19, DEFAULT);
